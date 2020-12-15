@@ -53,7 +53,7 @@ def send():
 @app.route("/api/pals")
 def pals():
     results = db.session.query(Pet.name, Pet.lat, Pet.lon).all()
-
+    print(results)
     hover_text = [result[0] for result in results]
     lat = [result[1] for result in results]
     lon = [result[2] for result in results]
@@ -74,6 +74,7 @@ def pals():
         }
     }]
 
+    print(pet_data)
     return jsonify(pet_data)
 
 

@@ -27,6 +27,8 @@ function buildPlot() {
       }
     };
 
+    console.log(data)
+    console.log(layout)
     Plotly.newPlot("plot", data, layout);
   });
 }
